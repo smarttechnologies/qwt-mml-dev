@@ -98,6 +98,8 @@ void QwtMathMLTextEngine::draw( QPainter *painter, const QRectF &rect,
     QwtMathMLDocument doc;
     doc.setContent( text );
     doc.setBaseFontPointSize( painter->font().pointSizeF() );
+    doc.setForegroundColor( m_foreground_color );
+    doc.setBackgroundColor( m_background_color );
 
     const QSizeF docSize = doc.size();
 

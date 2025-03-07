@@ -48,6 +48,16 @@ public:
 
     virtual void textMargins( const QFont &, const QString &,
         double &left, double &right, double &top, double &bottom ) const;
+
+    QColor foregroundColor() const { return m_foreground_color; }
+    void setForegroundColor( const QColor &color ) { m_foreground_color = color; }
+    
+    QColor backgroundColor() const { return m_background_color; }
+    void setBackgroundColor( const QColor &color ) { m_background_color = color; }
+
+private:
+    QColor m_background_color;
+    QColor m_foreground_color;
 };
 
 #endif
